@@ -1,0 +1,8 @@
+- title: Policy diffusion and networks
+  text: How policies spread across states, cities and countries, and the statistical methods (network event history analysis, latent network inference) that recover who learns from whom.
+- title: Digital communication and public officials
+  text: How elected officials and local governments communicate online, from misinformation and harmful content to how residents engage with official posts.
+- title: Network analysis and inferential methods
+  text: Statistical models for networks, including ERGMs, TERGMs and network-effects regression, with open-source software for applied researchers.
+- title: AI and machine learning for social science
+  text: Using machine learning and generative AI as research instruments, and measuring how AI is changing government and public communication.

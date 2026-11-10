@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">Bruce A. Desmarais</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu">
+    <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
+    <nav class="site-nav">
+      {% assign nav = "Research:/research/,Lab:/lab/,Speaking:/speaking/,Public Square Analytics:/public-square-analytics/,News:/news/,Teaching:/teaching/,CV:/cv/" | split: "," %}
+      {% for item in nav %}{% assign p = item | split: ":" %}
+      <a href="{{ p[1] | relative_url }}" {% if page.url contains p[1] %}class="active"{% endif %}>{{ p[0] }}</a>{% endfor %}
+    </nav>
+  </div>
+</header>

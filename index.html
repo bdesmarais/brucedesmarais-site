@@ -1,0 +1,80 @@
+---
+layout: default
+title: Bruce A. Desmarais
+description: Bruce A. Desmarais, Penn State political scientist and social data scientist. Research on policy diffusion, networks, AI, and digital communication with public officials; co-founder of Public Square Analytics (GovFeeds).
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow" style="color:#b9c8e3">Penn State · Center for Social Data Analytics · Public Square Analytics</p>
+      <h1>Bruce A. Desmarais</h1>
+      <p>I develop machine learning, network analysis, and generative AI methods to understand how policy spreads and how public officials communicate in the digital public square.</p>
+      <div class="btn-row">
+        <a class="btn" href="{{ '/research/' | relative_url }}">Explore the research</a>
+        <a class="btn ghost" href="{{ '/speaking/' | relative_url }}">Invite me to speak</a>
+        <a class="btn ghost" href="{{ '/public-square-analytics/' | relative_url }}">GovFeeds</a>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="{{ '/assets/img/bruce.jpg' | relative_url }}" alt="Portrait of Bruce A. Desmarais"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>About</h2>
+      <p>I am the DeGrandis-McCourtney Early Career Professor in Political Science at Penn State, Director of the Center for Social Data Analytics, and an affiliate of the Institute for Computational and Data Sciences. My lab develops and applies social data science methods to study systems of policymaking and digital communication with policymakers.</p>
+      <p>I am also co-founder and CEO of <a href="{{ '/public-square-analytics/' | relative_url }}">Public Square Analytics</a>, whose product GovFeeds helps local governments learn from each other on social media. I hold a Ph.D. from UNC Chapel Hill and taught at UMass Amherst before joining Penn State.</p>
+    </div>
+    <div>
+      <h2>Latest news</h2>
+      <ul class="news-list">
+        {% for post in site.posts limit:5 %}
+        <li><time>{{ post.date | date: "%B %-d, %Y" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <p><a href="{{ '/news/' | relative_url }}">All news →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2>Research areas</h2>
+    <div class="cards">
+      {% for a in site.data.areas %}<div class="card"><h3>{{ a.title }}</h3><p class="muted">{{ a.text }}</p></div>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Recent publications</h2>
+    {% assign recent = site.publications | where_exp: "p", "p.kind != 'software'" | sort: "rank" %}
+    <ul class="pubs">{% for p in recent limit:6 %}{% include pub.html p=p %}{% endfor %}</ul>
+    <p><a href="{{ '/research/' | relative_url }}">All publications and software →</a></p>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <h2>From LinkedIn</h2>
+    <div class="li-grid">{% for li in site.data.linkedin limit:3 %}{% include linkedin.html id=li.id topic=li.topic %}{% endfor %}</div>
+    <p><a href="https://www.linkedin.com/in/bruce-desmarais/">Follow on LinkedIn →</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <h2>The lab</h2>
+      <p>My students study policy diffusion, causal inference on networks, ideology measurement, and digital politics. Alumni hold faculty positions at KAIST, George Mason, and the University of South Carolina, and research roles at Meta, Amazon, and Princeton.</p>
+      <a class="btn ghost" href="{{ '/lab/' | relative_url }}">Meet the lab</a>
+    </div>
+    <div>
+      <h2>Speaking</h2>
+      <p>I speak to academic, government, and industry audiences on AI and public communication, policy diffusion, and network methods.</p>
+      <a class="btn" href="{{ '/speaking/' | relative_url }}">Invite me to speak</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+title: Bruce A. Desmarais
+tagline: Political scientist and social data scientist
+description: >-
+  Bruce A. Desmarais is the DeGrandis-McCourtney Early Career Professor in Political Science at
+  Penn State, Director of the Center for Social Data Analytics, and co-founder of Public Square
+  Analytics (GovFeeds). His research develops machine learning, network analysis and AI methods
+  to study policymaking and digital communication with public officials.
+author:
+  name: Bruce A. Desmarais
+  email: bdesmarais@psu.edu
+url: "https://bdesmarais.github.io"
+baseurl: "/brucedesmarais-site"
+lang: en_US
+timezone: America/New_York
+# Google Analytics 4 measurement ID (G-XXXXXXXXXX). Leave empty to disable tracking.
+google_analytics: ""
+social:
+  name: Bruce A. Desmarais
+  links:
+    - https://www.linkedin.com/in/bruce-desmarais/
+    - https://github.com/desmarais-lab
+    - https://publicsquareanalytics.com
+    - https://soda.la.psu.edu/people/bbd5087
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+collections:
+  publications:
+    output: true
+    permalink: /research/:name/
+defaults:
+  - scope: {path: "", type: posts}
+    values: {layout: post}
+  - scope: {path: "", type: publications}
+    values: {layout: publication}
+  - scope: {path: ""}
+    values: {layout: page}
+permalink: /news/:year/:month/:title/
+feed:
+  path: news/feed.xml
+exclude: [scripts, README.md, Gemfile, Gemfile.lock]

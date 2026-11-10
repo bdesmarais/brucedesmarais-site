@@ -1,0 +1,44 @@
+---
+title: Research
+permalink: /research/
+description: Publications, books, conference papers and open-source software by Bruce A. Desmarais on policy diffusion, network analysis, machine learning, and digital communication with public officials.
+lede: My research develops statistical and computational methods for studying how policy spreads and how public officials communicate, and applies them to state, local, and international politics.
+---
+<div class="cards">
+  {% for a in site.data.areas %}<div class="card"><h3>{{ a.title }}</h3><p class="muted">{{ a.text }}</p></div>{% endfor %}
+</div>
+
+<h2 id="publications">Publications</h2>
+<div class="pub-tools">
+  <input id="q" type="search" placeholder="Search titles, coauthors, journals" aria-label="Search publications">
+  <select id="kind" aria-label="Filter by type">
+    <option value="">All types</option><option value="article">Journal articles</option>
+    <option value="book">Book</option><option value="proceedings">Proceedings</option><option value="chapter">Chapters</option>
+  </select>
+</div>
+{% assign kinds = "book:Book,article:Journal articles,proceedings:Peer-reviewed proceedings,chapter:Chapters in edited volumes" | split: "," %}
+{% for k in kinds %}{% assign kk = k | split: ":" %}
+{% assign ps = site.publications | where: "kind", kk[0] | sort: "rank" %}
+<section class="pub-group" data-kind="{{ kk[0] }}">
+  <h3>{{ kk[1] }} <span class="muted small">({{ ps.size }})</span></h3>
+  <ul class="pubs">{% for p in ps %}{% include pub.html p=p %}{% endfor %}</ul>
+</section>
+{% endfor %}
+
+<h2 id="software">Software</h2>
+<div class="cards">
+  {% for s in site.data.software %}<div class="card"><h3><a href="{{ s.url }}">{{ s.name }}</a></h3><p class="muted">{{ s.desc }}</p></div>{% endfor %}
+</div>
+
+<h2 id="grants">Funding</h2>
+<p>My research has been supported by the National Science Foundation, the Russell Sage Foundation, and the Hewlett Foundation.</p>
+<ul>{% for g in site.data.grants limit:5 %}<li>{{ g }}</li>{% endfor %}</ul>
+
+<script>
+(function(){var q=document.getElementById('q'),k=document.getElementById('kind');
+function f(){var t=q.value.toLowerCase().trim(),kv=k.value;
+document.querySelectorAll('.pub-group').forEach(function(g){var show=0;var okKind=!kv||g.dataset.kind===kv;
+g.querySelectorAll('.pub').forEach(function(li){var ok=okKind&&(!t||li.dataset.text.indexOf(t)>-1||li.dataset.year===t);li.style.display=ok?'':'none';if(ok)show++;});
+g.style.display=show?'':'none';});}
+q.addEventListener('input',f);k.addEventListener('change',f);})();
+</script>

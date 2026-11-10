@@ -1,0 +1,28 @@
+---
+title: The Lab
+permalink: /lab/
+description: Graduate students, alumni, and postdocs in Bruce Desmarais's social data science lab at Penn State, and where they are now.
+lede: The lab develops computational and statistical methods (machine learning, network analysis, natural language processing, AI, and causal inference) and applies them to policymaking and digital communication with public officials. Our work has been funded by the National Science Foundation, the Russell Sage Foundation, and the Hewlett Foundation.
+---
+<h2>Current students</h2>
+<div class="people">
+  {% for s in site.data.lab.students %}
+  <div class="person">
+    {% if s.photo %}<img src="{{ '/assets/img/people/' | append: s.photo | relative_url }}" alt="{{ s.name }}" loading="lazy">{% else %}<div class="ph">{{ s.name | slice: 0 }}</div>{% endif %}
+    <div class="body"><h3>{% if s.url %}<a href="{{ s.url }}">{{ s.name }}</a>{% else %}{{ s.name }}{% endif %}</h3>
+    <p class="role">{{ s.role }}</p><p>{{ s.bio }}</p></div>
+  </div>
+  {% endfor %}
+</div>
+
+<h2>Where our Ph.D. alumni are now</h2>
+{% assign al = site.data.lab.alumni | sort: "year" | reverse %}
+<ul class="placements">{% for a in al %}<li><strong>{{ a.name }}</strong> (Ph.D. {{ a.year }}): {{ a.now }}</li>{% endfor %}</ul>
+
+<h2>Former postdocs</h2>
+<ul class="placements">{% for a in site.data.lab.postdocs %}<li><strong>{{ a.name }}</strong>: {{ a.now }}</li>{% endfor %}</ul>
+
+<div class="cta-box">
+  <h3 style="margin-top:0">Prospective students</h3>
+  <p>I advise Ph.D. students in Political Science and the dual-title program in Social Data Analytics at Penn State. If you are interested in policy diffusion, networks, AI, or digital politics, apply to one of these programs and mention my lab in your statement. You are welcome to <a href="mailto:bdesmarais@psu.edu?subject=Prospective%20student">email me</a> with a short description of your interests.</p>
+</div>

@@ -1,0 +1,26 @@
+---
+title: Speaking
+permalink: /speaking/
+description: Invite Bruce A. Desmarais to speak on AI and government communication, policy diffusion, network analysis, and social data science. Recent invited talks and media coverage.
+lede: I give talks and workshops for universities, government associations, and industry teams. Recent hosts include University College Dublin, Ohio State, Vanderbilt, Michigan, Princeton, and Meta.
+---
+<div class="cards">
+  <div class="card"><h3>AI and the digital public square</h3><p class="muted">How local governments and elected officials communicate online, what residents respond to, and how generative AI is changing public communication.</p></div>
+  <div class="card"><h3>How policies spread</h3><p class="muted">Evidence on policy diffusion across states and cities, and network methods for learning who learns from whom.</p></div>
+  <div class="card"><h3>Network methods for social science</h3><p class="muted">Network-effects regression, ERGMs, and causal inference with interdependent data. Available as talks or hands-on workshops.</p></div>
+  <div class="card"><h3>AI agents in research</h3><p class="muted">How AI agents are changing the workflow of empirical research, and how labs can use them while keeping results reproducible.</p></div>
+</div>
+
+<div class="cta-box">
+  <h3 style="margin-top:0">Invite me to speak</h3>
+  <p>Please send the event, audience, date, and format (in person or virtual).</p>
+  <a class="btn" href="mailto:bdesmarais@psu.edu?subject=Speaking%20invitation&body=Event%3A%0AAudience%3A%0ADate%3A%0AFormat%20(in%20person%20or%20virtual)%3A%0ATopic%3A">Email a speaking invitation</a>
+</div>
+
+<h2>Recent invited talks</h2>
+<ul class="talks">
+{% for t in site.data.talks limit:20 %}<li>{% if t.title != "" %}<span class="t">{{ t.title }}</span><br>{% endif %}<span class="muted">{{ t.where }}</span></li>{% endfor %}
+</ul>
+
+<h2>In the media</h2>
+<ul>{% for p in site.data.press %}<li>{{ p }}</li>{% endfor %}</ul>

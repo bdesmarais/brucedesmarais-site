@@ -1,0 +1,42 @@
+students:
+  - name: Lingyu (Jack) Fuca
+    role: Ph.D. student, Political Science
+    photo: jack.jpeg
+    bio: Estimates causal effects in complex social networks, combining causal inference, network analysis, machine learning and formal theory to separate social influence from homophily.
+  - name: Kadir Cihan Duran
+    role: Ph.D. candidate, Political Science and Social Data Analytics
+    photo: cihan.jpg
+    bio: Studies competitive authoritarian regimes and social media, using network analysis, deep neural networks and natural language processing.
+  - name: Jody Park
+    role: Ph.D. student, Political Science
+    photo: jody.jpg
+    url: https://jodypark.github.io
+    bio: Studies racial and ethnic diversity in U.S. federal agencies and how it shapes agency ideology and institutional outcomes, using administrative data.
+  - name: Nicholas Hemauer
+    role: Ph.D. candidate, Political Science and Social Data Analytics
+    photo: nick.jpeg
+    url: https://nickhemauer.com
+    bio: Studies policy diffusion, state public health policy and political misinformation, including how firearm mortality shapes the adoption of firearm regulations.
+  - name: Connor Stitt
+    role: Ph.D. student, Political Science
+    photo: connor.jpg
+    url: https://connormstitt.github.io/
+    bio: Estimates elite and mass ideology with tools from computational neuroscience and network analysis.
+  - name: Yue (Emily) Wang
+    role: Ph.D. student, Political Science
+    bio: Joined the lab in fall 2026.
+alumni:
+  - {name: Ted Hsuan Yun Chen, now: Assistant Professor, George Mason University, year: 2019}
+  - {name: Matt Denny, now: "Staff Research Scientist, Meta; Adjunct Professor, Georgetown University", year: 2019}
+  - {name: Ishita Gopal, now: "Postdoctoral Researcher, Transdisciplinary Institute in Applied Data Sciences, Washington University in St. Louis", year: 2023}
+  - {name: Zachary Jones, now: "Senior Data Scientist, Amazon", year: 2017}
+  - {name: Sangyeon Kim, now: "Postdoctoral Scholar, Observatory on Social Media, Indiana University", year: 2023}
+  - {name: Taegyoon Kim, now: "Assistant Professor, School of Digital Humanities and Computational Social Sciences, KAIST", year: 2022}
+  - {name: Fridolin Linder, now: "Research Scientist and Software Engineer, Meta", year: 2018}
+  - {name: Omer Yalcin, now: "Faculty Fellow, Data Analytics and Computational Social Science, UMass Amherst", year: 2021}
+  - {name: Nitheesha Nakka, now: "Professional Specialist for Data and Statistics, Niehaus Center, Princeton University", year: 2025}
+postdocs:
+  - {name: Howard Liu, now: "Assistant Professor of Political Science, University of South Carolina"}
+  - {name: Medha Uppala, now: "Senior Statistician, Westat"}
+  - {name: Yuehong Cassandra Tai, now: "Assistant Research Professor and Assistant Director, Center for Social Data Analytics, Penn State"}
+  - {name: Isaac Pollert, now: "Assistant Teaching Professor of Political Science, Penn State"}

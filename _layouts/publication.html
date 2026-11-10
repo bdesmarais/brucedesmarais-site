@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="wrap page publication">
+  <p class="eyebrow"><a href="{{ '/research/' | relative_url }}">Research</a> · {% case page.kind %}{% when 'article' %}Journal article{% when 'proceedings' %}Conference proceedings{% when 'chapter' %}Book chapter{% when 'book' %}Book{% when 'software' %}Software{% endcase %}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="pub-authors">{{ page.authors | join: ", " }}</p>
+  <p class="pub-venue"><em>{{ page.venue }}</em>{% if page.volume %} {{ page.volume }}{% if page.number %}({{ page.number }}){% endif %}{% endif %}{% if page.pages %}: {{ page.pages }}{% endif %}{% if page.year %}, {{ page.year }}{% endif %}.</p>
+  {% if page.link %}<p><a class="btn" href="{{ page.link }}">Read the {% if page.kind == 'software' %}software{% else %}paper{% endif %}</a>{% if page.doi %} <span class="muted">DOI: {{ page.doi }}</span>{% endif %}</p>{% endif %}
+  {{ content }}
+  <p class="muted small">Interested in this work? <a href="{{ '/speaking/' | relative_url }}">Invite Bruce to speak</a> or <a href="mailto:bdesmarais@psu.edu?subject={{ page.title | url_encode }}">get in touch</a>.</p>
+</article>

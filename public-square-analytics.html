@@ -1,0 +1,33 @@
+---
+title: Public Square Analytics and GovFeeds
+permalink: /public-square-analytics/
+description: Public Square Analytics, co-founded by Bruce A. Desmarais, builds GovFeeds, a social media benchmarking tool that lets local governments see what peer governments post and what residents respond to.
+lede: Public Square Analytics is a technology and consulting firm dedicated to improving the digital public square. Our product, GovFeeds, turns research on government social media into a tool that communication teams use every day.
+---
+<div class="stat-row">
+  <div class="stat"><b>5,000+</b><span>government accounts tracked</span></div>
+  <div class="stat"><b>1.8M+</b><span>posts indexed</span></div>
+  <div class="stat"><b>50</b><span>states covered</span></div>
+  <div class="stat"><b>Daily</b><span>data refresh</span></div>
+</div>
+<p class="muted small">Figures as reported on <a href="https://govfeeds.com">govfeeds.com</a>.</p>
+
+<div class="split">
+  <div>
+    <h2>What GovFeeds does</h2>
+    <p>GovFeeds lets city and county communication teams search what peer governments posted this week and see which posts residents responded to. Teams use it to borrow approaches that work, benchmark their own accounts, and bring evidence to managers and councils.</p>
+    <a class="btn" href="https://govfeeds.com">Visit GovFeeds</a>
+    <a class="btn ghost" href="https://publicsquareanalytics.com">Public Square Analytics</a>
+  </div>
+  <div>
+    <h2>From research to practice</h2>
+    <p>GovFeeds grew out of our NSF-funded research on digitally accountable public representation, which collects and analyzes the social media posts of public officials and local governments. The same data support academic studies of how governments communicate, how residents engage, and how AI-generated content is entering official communication.</p>
+    <p><a href="{{ '/research/' | relative_url }}">See the research →</a></p>
+  </div>
+</div>
+
+<h2>Updates</h2>
+<ul class="news-list">
+{% assign psqa = site.posts | where_exp: "p", "p.tags contains 'govfeeds'" %}
+{% for post in psqa limit:6 %}<li><time>{{ post.date | date: "%B %-d, %Y" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>{% endfor %}
+</ul>

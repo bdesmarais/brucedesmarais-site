@@ -1,0 +1,6 @@
+- {name: palsr, url: "https://CRAN.R-project.org/package=palsr", desc: "Projected Actor Locations for spatial modeling of dyadic interactions between moving actors (SoftwareX, accepted)."}
+- {name: neha, url: "https://github.com/desmarais-lab/neha", desc: "Network event history analysis: models diffusion while accounting for covariates and latent network ties."}
+- {name: modeLLtest, url: "https://CRAN.R-project.org/package=modeLLtest", desc: "Compare models with cross-validated log-likelihood (CVDM and CVMF tests)."}
+- {name: btergm, url: "https://CRAN.R-project.org/package=btergm", desc: "Temporal exponential random graph models by bootstrapped pseudolikelihood."}
+- {name: GERGM, url: "https://github.com/matthewjdenny/GERGM", desc: "Estimation and fit diagnostics for generalized exponential random graph models."}
+- {name: NetworkInference, url: "https://CRAN.R-project.org/package=NetworkInference", desc: "Inferring latent diffusion networks with the netinf algorithm."}

@@ -1,0 +1,4 @@
+<li class="pub" data-year="{{ include.p.year }}" data-text="{{ include.p.title | downcase | escape }} {{ include.p.authors | join: ' ' | downcase }} {{ include.p.venue | downcase | escape }}">
+  <a class="pub-title" href="{{ include.p.url | relative_url }}">{{ include.p.title }}</a>
+  <div class="pub-meta">{{ include.p.authors | join: ", " }}. <em>{{ include.p.venue }}</em>{% if include.p.year %}, {{ include.p.year }}{% endif %}.</div>
+</li>
