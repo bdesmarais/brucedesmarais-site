@@ -22,6 +22,18 @@ lede: The lab develops computational and statistical methods (machine learning, 
 <h2>Former postdocs</h2>
 <ul class="placements">{% for a in site.data.lab.postdocs %}<li><strong>{{ a.name }}</strong>: {{ a.now }}</li>{% endfor %}</ul>
 
+<h2>Funding</h2>
+<p>The lab's research is supported by the National Science Foundation, the Russell Sage Foundation, and the Hewlett Foundation.</p>
+<div class="funders">
+  <div class="funder"><div class="logo"><img src="{{ '/assets/img/funders/nsf.png' | relative_url }}" alt="National Science Foundation logo"></div>
+    <div class="body"><h3>National Science Foundation</h3><ul>{% for g in site.data.grants %}{% if g contains "NSF" %}<li>{{ g }}</li>{% endif %}{% endfor %}</ul></div></div>
+  <div class="funder"><div class="photo"><img src="{{ '/assets/img/funders/rsf.jpg' | relative_url }}" alt="Russell Sage Foundation building, New York"></div>
+    <div class="body"><h3>Russell Sage Foundation</h3><ul>{% for g in site.data.grants %}{% if g contains "Russell Sage" %}<li>{{ g }}</li>{% endif %}{% endfor %}</ul>
+    <p class="muted small">Photo: Beyond My Ken, CC BY-SA 3.0, via Wikimedia Commons.</p></div></div>
+  <div class="funder"><div class="logo"><span style="font-family:var(--serif);font-size:1.6rem;color:var(--navy)">Hewlett Foundation</span></div>
+    <div class="body"><h3>Hewlett Foundation</h3><ul>{% for g in site.data.grants %}{% if g contains "Hewlett" %}<li>{{ g }}</li>{% endif %}{% endfor %}</ul></div></div>
+</div>
+
 <div class="cta-box">
   <h3 style="margin-top:0">Prospective students</h3>
   <p>I advise Ph.D. students in Political Science and the dual-title program in Social Data Analytics at Penn State. If you are interested in policy diffusion, networks, AI, or digital politics, apply to one of these programs and mention my lab in your statement. You are welcome to <a href="mailto:bdesmarais@psu.edu?subject=Prospective%20student">email me</a> with a short description of your interests.</p>

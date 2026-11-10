@@ -15,7 +15,7 @@ description: Bruce A. Desmarais, Penn State political scientist and social data 
         <a class="btn ghost" href="{{ '/public-square-analytics/' | relative_url }}">GovFeeds</a>
       </div>
     </div>
-    <div class="hero-photo"><img src="{{ '/assets/img/bruce.jpg' | relative_url }}" alt="Portrait of Bruce A. Desmarais"></div>
+    <div class="hero-photo"><img src="{{ '/assets/img/bruce.jpg' | relative_url }}" alt="Portrait of Bruce A. Desmarais"><p class="credit">Headshot by My R.A.D. Pics</p></div>
   </div>
 </section>
 
@@ -42,7 +42,7 @@ description: Bruce A. Desmarais, Penn State political scientist and social data 
   <div class="wrap">
     <h2>Research areas</h2>
     <div class="cards">
-      {% for a in site.data.areas %}<div class="card"><h3>{{ a.title }}</h3><p class="muted">{{ a.text }}</p></div>{% endfor %}
+      {% for a in site.data.areas %}<div class="card img-card">{% if a.image %}<img src="{{ '/assets/img/work/' | append: a.image | relative_url }}" alt="{{ a.title }}" loading="lazy">{% endif %}<div class="card-body"><h3>{{ a.title }}</h3><p class="muted">{{ a.text }}</p></div></div>{% endfor %}
     </div>
   </div>
 </section>

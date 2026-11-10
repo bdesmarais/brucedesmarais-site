@@ -4,8 +4,9 @@ permalink: /research/
 description: Publications, books, conference papers and open-source software by Bruce A. Desmarais on policy diffusion, network analysis, machine learning, and digital communication with public officials.
 lede: My research develops statistical and computational methods for studying how policy spreads and how public officials communicate, and applies them to state, local, and international politics.
 ---
+<figure class="banner"><img src="{{ '/assets/img/work/supreme-court-citations.png' | relative_url }}" alt="Layered network of U.S. Supreme Court citations by Chief Justice era"><figcaption>Citation networks of U.S. Supreme Court opinions, layered by Chief Justice era, from our research on the interdependence of legal decisions.</figcaption></figure>
 <div class="cards">
-  {% for a in site.data.areas %}<div class="card"><h3>{{ a.title }}</h3><p class="muted">{{ a.text }}</p></div>{% endfor %}
+  {% for a in site.data.areas %}<div class="card img-card">{% if a.image %}<img src="{{ '/assets/img/work/' | append: a.image | relative_url }}" alt="{{ a.title }}" loading="lazy">{% endif %}<div class="card-body"><h3>{{ a.title }}</h3><p class="muted">{{ a.text }}</p></div></div>{% endfor %}
 </div>
 
 <h2 id="publications">Publications</h2>
