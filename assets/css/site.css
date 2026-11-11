@@ -145,7 +145,7 @@ figcaption { font-size: .85rem; color: var(--muted); margin-top: .4em; }
 .funder ul { padding-left: 1.1em; margin: .4em 0 0; font-size: .9rem; }
 
 .socials { display: flex; justify-content: center; gap: 14px; margin-top: 12px; }
-.socials a { color: #5b6470; line-height: 0; }
-.socials a:hover { color: var(--blue); }
+.socials a { color: rgba(255,255,255,.85); line-height: 0; }
+.socials a:hover { color: #fff; }
 .socials svg { width: 30px; height: 30px; fill: currentColor; }
 .site-footer .credit { font-size: .85em; opacity: .8; }
