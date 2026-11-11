@@ -134,6 +134,8 @@ h3 { font-size: 1.2rem; margin: 1.2em 0 .3em; }
 figcaption { font-size: .85rem; color: var(--muted); margin-top: .4em; }
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 24px; margin: 0 0 2em; }
 .gallery img { width: 100%; aspect-ratio: 4/3; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+.gallery.photos { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.gallery.photos img { object-fit: cover; background: var(--soft); }
 .funders { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
 .funder { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #fff; }
 .funder .logo { height: 150px; display: flex; align-items: center; justify-content: center; background: var(--soft); }
