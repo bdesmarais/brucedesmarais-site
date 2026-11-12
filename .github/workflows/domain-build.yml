@@ -1,0 +1,28 @@
+name: Build for brucedesmarais.com
+# Builds the site for the root of brucedesmarais.com (url/baseurl overridden) and uploads the
+# rendered _site as an artifact. The live domain is served from desmarais-lab.github.io, which
+# also hosts the CV PDF, quiz pages, card and other static files, so the rendered pages are
+# copied into that repository (see README).
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Point the build at the custom domain
+        run: |
+          sed -i 's#^url: .*#url: "https://brucedesmarais.com"#' _config.yml
+          sed -i 's#^baseurl: .*#baseurl: ""#' _config.yml
+          grep -E '^(url|baseurl):' _config.yml
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site-domain
+          path: _site
+          retention-days: 14
