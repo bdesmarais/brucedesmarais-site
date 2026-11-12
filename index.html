@@ -50,7 +50,7 @@ description: Bruce A. Desmarais, Penn State political scientist and social data 
 <section class="section">
   <div class="wrap">
     <h2>Recent publications</h2>
-    {% assign recent = site.publications | where_exp: "p", "p.kind != 'software'" | sort: "rank" %}
+    {% assign recent = site.publications | where_exp: "p", "p.kind != 'software'" | where_exp: "p", "p.kind != 'book'" | sort: "rank" %}
     <ul class="pubs">{% for p in recent limit:6 %}{% include pub.html p=p %}{% endfor %}</ul>
     <p><a href="{{ '/research/' | relative_url }}">All publications and software →</a></p>
   </div>
